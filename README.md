@@ -2,12 +2,12 @@
 
 
 
-Problem Overview
+### Problem Overview
  Real-Time Human Identification is an essential application of biometric and surveillance systems, especially in security, law enforcement, and KYC Verifications. It is challenging as it aims to identify each human as a unique entity. Our project aims to address this challenge by developing a deep learning-based Real-Time Human Identification System (RHIDS) which detects persons for a given image or frame of video and identifies the persons uniquely with their unique ids or names. 
 
 
 
-Approach and Architecture
+### Approach and Architecture
 We have planned three different approaches that were used to develop the Real-Time Human Identification System (RHIDS). The first approach is Human Extraction, which is used to detect humans in a given image. The second is the Human-to-Human Matching approach, which involves measuring whether two images correspond to the same person or different persons. The third approach is the RHIDS System Architecture, which is based on the Human Extraction and Human-to-Human Matching approach and is used to identify each human uniquely with a unique id in a video or live stream.
 
 
@@ -24,11 +24,11 @@ We have planned three different approaches that were used to develop the Real-Ti
 
 
 
-Human Extraction
+### Human Extraction
 We use a Trained Object Detection model which is trained to detect humans in a given image. Then detected humans will be extracted from the image using indexing the bounding box values.
 
 
-Human-to-Human Matching
+### Human-to-Human Matching
 We use a trained image feature extractor which can extract features of the human in the given image. Using this feature extractor, the system extracts feature vectors for each image and a cosine similarity function is used to measure the similarity score between two feature vectors. Now using an estimated threshold, the system decides that the images are of the same person if the similarity score is greater than the threshold value otherwise images are of different persons. More about feature extractor and cosine similarity is given below.
 
 
@@ -63,7 +63,7 @@ Threshold Verification: An estimated threshold value is selected to determine wh
 
 
 
-RHIDS System Architecture
+### RHIDS System Architecture
 In our Real-Time Human Identification System, we combine Human Extraction and Human-to-Human Matching in a loop of video or stream inference. Here is the step-by-step approach given - 
 First, we take an empty list of galleries that will contain feature vectors of different humans. 
 From the first frame, the Object detector will detect Humans in the frame and use the Human Extractor approach to get images of each human in the frame.  
