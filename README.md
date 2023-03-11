@@ -27,6 +27,8 @@ We have planned three different approaches that were used to develop the Real-Ti
 ### Human Extraction
 We use a Trained Object Detection model which is trained to detect humans in a given image. Then detected humans will be extracted from the image using indexing the bounding box values.
 
+![image](https://user-images.githubusercontent.com/83460431/224514284-d3665b57-d86d-4e87-b12e-61c0d68544fb.png)
+
 
 ### Human-to-Human Matching
 We use a trained image feature extractor which can extract features of the human in the given image. Using this feature extractor, the system extracts feature vectors for each image and a cosine similarity function is used to measure the similarity score between two feature vectors. Now using an estimated threshold, the system decides that the images are of the same person if the similarity score is greater than the threshold value otherwise images are of different persons. More about feature extractor and cosine similarity is given below.
@@ -55,6 +57,7 @@ Market1501 Dataset: https://zheng-lab.cecs.anu.edu.au/Project/project_reid.html
 **Threshold Verification:** An estimated threshold value is selected to determine whether two vectors can be considered similar or dissimilar. For our use case, we have taken 0.7 as the threshold value.
 
 
+![image](https://user-images.githubusercontent.com/83460431/224514232-1a41ef1d-a78b-4679-a3f3-e44d089be1c9.png)
 
 
 
@@ -74,6 +77,7 @@ In our Real-Time Human Identification System, we combine Human Extraction and Hu
 6) Now the threshold verification will be applied to Similarity Matrix and find the pre-image and ID (index number in gallery list) of the pre-image of every feature vector of the query list in the gallery list. If any of the feature vectors in the query list does not have any pre-image in the gallery list i.e. every feature vector in the gallery has a similarity score less than the threshold then than feature vector will be appended to the gallery feature vector. 
 
 
+![image](https://user-images.githubusercontent.com/83460431/224514240-50b82c73-0c16-4332-a9e0-dd64b8d89648.png)
 
 
 
